@@ -16,9 +16,9 @@ def setup(request):
 
 
 @pytest.mark.usefixtures("setup")
-class test_login_from_personal_cab:
+class testLoginFromPersonalCab:
 
-    def test_login_from_personal_cabinet(self):
+    def testLoginFromPersonalCab(self):
         driver = self.driver
         driver.find_element_by_id(RegistrationPageLocators.LOGIN_BUTTON_PERSONAL_CABINET).click()
 

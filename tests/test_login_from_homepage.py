@@ -15,9 +15,9 @@ def setup(request):
 
 
 @pytest.mark.usefixtures("setup")
-class test_login_from_homep:
+class testLoginFromHomep:
 
-    def test_login_from_homepage(self):
+    def testLoginFromHomep(self):
         driver = self.driver
         driver.find_element_by_id(RegistrationPageLocators.LOGIN_BUTTON_HOMEPAGE).click()
 

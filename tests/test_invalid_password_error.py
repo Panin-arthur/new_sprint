@@ -5,9 +5,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import *
 
-@pytest.fixture(scope="class")
+
+@pytest.confest()
 def setup(request):
     driver = webdriver.Chrome()
     driver.get("https://stellarburgers.nomoreparties.site/")
@@ -17,9 +17,9 @@ def setup(request):
 
 
 @pytest.mark.usefixtures("setup")
-class test_invalid_password_er:
+class testInvalidPasswordEr:
 
-    def test_invalid_password_error(self):
+    def testInvalidPasswordEr(self):
         driver = self.driver
         driver.find_element_by_id(RegistrationPageLocators.NAME_INPUT).send_keys("Имя")
         driver.find_element_by_id(RegistrationPageLocators.EMAIL_INPUT).send_keys("example@example.com")

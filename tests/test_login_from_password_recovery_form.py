@@ -16,9 +16,9 @@ def setup(request):
 
 
 @pytest.mark.usefixtures("setup")
-class test_login_from_password_recovery_f :
+class testLoginFromPasswordRecoveryForm :
 
-    def test_login_from_password_recovery_form(self):
+    def testLoginFromPasswordRecoveryForm(self):
         driver = self.driver
         driver.find_element_by_id(RegistrationPageLocators.LOGIN_BUTTON_PASSWORD_RECOVERY_FORM).click()
 

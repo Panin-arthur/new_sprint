@@ -17,9 +17,9 @@ def setup(request):
 
 
 @pytest.mark.usefixtures("setup")
-class test_successful_reg:
+class testSuccessfulReg:
 
-    def test_successful_registration(self):
+    def testSuccessfulReg(self):
         driver = self.driver
         name = "Имя"
         email = fake.email()
